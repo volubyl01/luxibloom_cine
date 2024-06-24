@@ -56,8 +56,8 @@ async function loadMovies() {
 	moviesList = liste;
 
 	const container = document.getElementById("container");
-	const favorisContainer = document.getElementById("favoris");
-	const favoris = JSON.parse(localStorage.getItem("favorisContainer")) || [];
+	const listeContainer = document.getElementById("favoris");
+	const favoris = JSON.parse(localStorage.getItem("listeContainer")) || [];
 	if (container) {
 		// Vérifier si l'élément existe avant d'y accéder
 		liste.forEach((movie) => {
