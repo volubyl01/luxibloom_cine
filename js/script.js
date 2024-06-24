@@ -21,7 +21,7 @@ const options = {
 	},
 };
 
-fetch("https://api.themoviedb.org/3/list/1?language=fr-FR&page=1", options)
+fetch("https://api.themoviedb.org/3/list/1?language=fr-FR&page=5", options)
 	.then((response) => response.json())
 	.then((response) => console.log(response))
 	.catch((err) => console.error(err));
@@ -40,7 +40,7 @@ let moviesList;
 async function listMovies() {
 	try {
 		const response = await fetch(
-			"https://api.themoviedb.org/3/list/7?language=fr-FR&page=1",
+			"https://api.themoviedb.org/3/list/8?language=fr-FR&page=1",
 			getMethod
 		);
 		const data = await response.json();
