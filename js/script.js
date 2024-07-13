@@ -40,7 +40,8 @@ let moviesList;
 async function listMovies() {
 	try {
 		const response = await fetch(
-			"https://api.themoviedb.org/3/list/8?language=fr-FR&page=1",
+			// ici on choisit la liste : ici '8', la langue, et '3' ????,
+			"https://api.themoviedb.org/3/list/29?language=fr-FR&page=1",
 			getMethod
 		);
 		const data = await response.json();
