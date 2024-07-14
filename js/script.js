@@ -3,7 +3,7 @@ window.onload = function () {
 	const favorisContainer = document.getElementById("favorisContainer");
 	if (favoris.length === 0) {
 		favorisContainer.innerHTML =
-			'<h1 class="text-center">Aucun favori pour le moment.</h1>';
+			'<h1 class="text-center">Aucun favori pour le moment.<br>Retourner à l\'accueil</h1>';
 	} else {
 		favoris.forEach((movie) => {
 			const card = createMovieCard(movie, true);
@@ -41,7 +41,7 @@ async function listMovies() {
 	try {
 		const response = await fetch(
 			// ici on choisit la liste : ici '8', la langue, et '3' ????,
-			"https://api.themoviedb.org/3/list/29?language=fr-FR&page=1",
+			"https://api.themoviedb.org/3/list/28?language=fr-FR&page=1",
 			getMethod
 		);
 		const data = await response.json();
